@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title> JS </title>
+    <link rel="stylesheet" href="{{url_for('static',  filename='endless.css')}}">
+</head>
+
+
+<h1> Login </h1>
+
+<h2> <a href="{{url_for('index')}}">HOME</a></h2>
+
+<form action="" method="Post" novalidate class="login">
+    {{form.hidden_tag()}}
+    {{form.user_id.label}}
+    {{form.user_id(placeholder="Username")}}
+    {% for error in form.user_id.errors %}
+        {{error}}
+    {%endfor%}
+    <br>
+    {{form.password.label}}
+    {{form.password(placeholder="Password")}}
+    {% for error in form.password.errors %}
+        {{error}}
+    {%endfor%}
+    <br>
+    {{form.submit()}}
+
+</form>
+
+
+
+<p> Don't have an account? <a href="registration">Register Here!</a></p>

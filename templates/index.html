@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title> JS </title>
+    <link rel="stylesheet" href="{{url_for('static',  filename='endless.css')}}">
+</head>
+
+<body>
+    <h1 id="title">LANDELORIAN'S HAUNTED ESCAPE: GHOSTLIGHT CONQUEST</h1>
+    {% if g.user %}
+    <h2>Logged in as: {{g.user}}</h2>
+    <h2><a href="{{url_for('logout')}}"> Log Out </a></h2>
+    {%endif%}
+    {% if not g.user %}
+    <h2><a href="{{url_for('login')}}"> Login Here </a> </h2>
+    {% endif %}
+
+    <section id="gamemodes">
+        <h2 class="mode"><a> STORY MODE (coming soon)</a></h2>
+
+        <!-- <p><a href="{{url_for('bossrun')}}"> BOSS RUN </a></p> -->
+
+        <h2 class="mode"><a href="{{url_for('endless')}}">ENDLESS MODE</a></h2>
+    </section>
+
+    <!-- introduction written with the help of chatGPT -->
+    <p id="intro"> Welcome to "Landalorian's Haunted Escape: Ghostlight Conquest," where you'll step into the boots
+        of a lone Landalorian warrior trapped within the eerie confines of a haunted house. Equipped with a powerful
+        flashlight mounted atop your helmet, you have the advantage of controlling its direction without needing to
+        physically turn your head, thanks to its automated swivel mechanism. As you navigate through the spooky
+        confines of the house, waves of vengeful ghosts will test your mettle. Your survival depends on your wits,
+        reflexes, and strategic use of your flashlight to ward off the encroaching darkness and spectral threats.
+        Are you ready to face the unknown and conquer your fears in this thrilling adventure?</p>
+    <br>
+    <section id="controls">
+        <h3>[CONTROLS & TIPS]</h3>
+        <p> <b class="control">W A S D</b> - to move</p>
+        <p> <b class="control">LEFT MOUSE BUTTON</b> - to shine flashlight</p>
+        <p> <b class="control">KILL GHOSTS</b> - to recharge flashlight</p>
+        <p> <b class="control">PICKUP HEALTHPACKS</b> (yellow squares) dropped from ghosts - to regain health </p>
+        <p> <b class="control">PICKUP POWERUPS</b> (rainbow squares) dropped from ghosts - to gain 1 of 3 random powerups</p>
+        <p> <b class="control"> LONG FLASH:</b> doubles the distance covered by the flashlight for a short while</p>
+        <p> <b class="control"> EXTRA DAMAGE: </b> doubles the damage done by the player for a short while</p>
+        <p><b class="control"> WAVE WIPE: </b> creates a shockwave that kills all enemies in the current wave</p>
+    </section>
+
+    
+    <section id="leaderboard">
+        <h2>LEADERBOARD</h2>
+        {% for user in leaderboard%}
+            <p>{{user['user_id']}} : {{user['waveCount']}} waves</p>
+
+        {% endfor %}
+    </section>
+
+</body>
+
+</html>
