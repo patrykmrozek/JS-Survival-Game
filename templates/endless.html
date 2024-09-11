@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title> CA2 </title>
+    <!-- to link the javascript to the html -->
+    <script src="{{url_for('static', filename='endless.js')}}" type="module"></script>
+    <link rel="stylesheet" href="{{url_for('static',  filename='endless.css')}}">
+</head>
+
+<body>
+
+    <h1> ENDLESS MODE </h1>
+
+    <h2 id="back"><a href="{{url_for('index')}}">HOME</a></h2>
+
+    <h2 id="outcome"></h2>
+    <!-- code below from: -->
+    <!-- https://stackoverflow.com/questions/29884654/button-that-refreshes-the-page-on-click -->
+    <button onclick="window.location.reload();">
+        <h3 id="replay"><a>PLAY AGAIN</a></h3>
+    </button>
+    <a id="restart"></a>
+
+    <form id="endlessForm" action="" method="POST">
+        <label for="user_id">Enter Username to feature on the leaderboard: </label>
+        <input type="text" name="user_id" id="user_id">
+        <input type="submit">
+    </form>
+
+
+    <p id="waveCount"></p>
+    <section id="powerups">
+        <p id="longFlash"> LONG FLASH</p>
+        <p id="extraDamage"> EXTRA DAMAGE</p>
+        <p id="waveWipe"> WAVE WIPE</p>
+    </section>
+
+
+    <!-- area where you can draw stuff on the screen -->
+    <canvas width="1300" height="900"></canvas>
+
+    <p id="speed"></p>
+    <p id="button"></p>
+</body>
+
+</html>

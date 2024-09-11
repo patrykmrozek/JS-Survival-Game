@@ -1,0 +1,168 @@
+canvas {
+    background-color: black;
+    border: 5px solid white;
+}
+
+/* background: https://wallpaper-house.com/wallpaper-id-424851.php */
+
+html {
+    text-align: center;
+    background-color: black;
+    background-image: url(wallpaper.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#outcome {
+    color: red;
+    position: absolute;
+    top: 44vh;
+    left: 38vw;
+    font-size: 5em;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+
+}
+
+#replay {
+    color: white;
+    position: absolute;
+    top: 55vh;
+    left: 41vw;
+    font-size: 3em;
+    display: none;
+    transition: 0.2s;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+#replay:hover {
+    transform: scale(1.2);
+}
+
+/* https://stackoverflow.com/questions/4919076/outline-effect-to-text */
+#endlessForm {
+    color: white;
+    position: absolute;
+    top: 65vh;
+    left: 37vw;
+    font-size: 1em;
+    display: none;
+    transition: 0.2s;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+#powerups {
+    display: flex;
+    justify-content: flex-start;
+    position: absolute;
+    top: 10px;
+    left: 350px;
+}
+
+#powerups p {
+    margin-right: 10px;
+    color: white;
+    padding: 10px;
+}
+
+#longFlash {
+    top: 450px;
+}
+
+#extraDamage {
+    top: 300px;
+}
+
+#waveWipe {
+    top: 150px;
+}
+
+#waveCount {
+    font-size: 2em;
+    color: white;
+    position: absolute;
+    left: 15%;
+    top: 120px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+
+
+}
+
+h1, h2 {
+    color: white;
+}
+
+#back {
+    color: white;
+    position: absolute;
+    right: 2%;
+    top: 2%;
+}
+
+
+#powerups {
+    flex-wrap: wrap;
+    justify-content: center;
+    left: 20%;
+    transform: translateX(-50%);
+}
+
+#powerups p {
+    margin: 5px;
+}
+
+
+
+#title {
+    font-size: 3em;
+}
+
+#gamemodes {
+    color: white;
+    margin: 0em auto;
+}
+
+#intro {
+    text-align: center;
+    color: white;
+    width: 50%;
+    margin: 0em auto;
+}
+
+#gamemodes > .mode {
+    color: gray;
+}
+
+.control {
+    color: red;
+}
+
+#controls {
+    border: 2px solid white;
+    width: 50%;
+    margin: 0em auto;
+    color: white;
+}
+
+.mode {
+    border: 1px solid red;
+    width: 10em;
+    margin: 1em auto; 
+    padding: 5px;
+}
+
+#leaderboard {
+    border: 2px solid white;
+    width: 30%;
+    margin: 2em auto;
+    color: white;
+}
+
+#leaderboard * {
+    border-bottom: 1px solid white;
+    padding: 3px;
+}
+
+
+p {
+    color: white;
+}
