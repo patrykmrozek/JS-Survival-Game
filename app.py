@@ -4,6 +4,7 @@ from forms import LoginForm, RegistrationForm
 from functools import wraps
 from flask_session import Session
 from werkzeug.security import generate_password_hash, check_password_hash
+
 import os
 from dotenv import load_dotenv
 
@@ -14,7 +15,6 @@ load_dotenv()
 load_dotenv(".flaskenv")
 
 app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")
-
 
 
 def login_required(view):
