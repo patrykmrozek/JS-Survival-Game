@@ -3,3 +3,4 @@ __pycache__
 backup-repo.git
 .pyc
 .flaskenv
+.env

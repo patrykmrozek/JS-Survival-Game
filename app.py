@@ -13,6 +13,7 @@ app = Flask(__name__)
 # Load environment variables from .env file
 load_dotenv()
 load_dotenv(".flaskenv")
+load_dotenv(".env")
 
 app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")
 
